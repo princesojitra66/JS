@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Recipe Book</title>
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+  <div class="container">
+    <div class="left-panel">
+      <h1>Recipe Book</h1>
+      <form id="recipeForm" autocomplete="off">
+        <input type="hidden" id="recipeId" />
+        <input type="text" id="title" placeholder="Recipe Title" required />
+        <textarea id="ingredients" placeholder="Ingredients (comma-separated)" required></textarea>
+        <textarea id="instructions" placeholder="Instructions"></textarea>
+        <select id="cuisine" required>
+          <option value="">Select Cuisine</option>
+          <option>Italian</option>
+          <option>Mexican</option>
+          <option>Indian</option>
+          <option>Chinese</option>
+          <option>Other</option>
+        </select>
+        <input type="text" id="tags" placeholder="Tags (comma-separated)" />
+        <button type="submit">Save Recipe</button>
+      </form>
+    </div>
+    <div class="right-panel">
+      <h2>Recipes</h2>
+      <div class="search-filter">
+        <input type="text" id="searchTitle" placeholder="Search by Title..." />
+        <input type="text" id="searchIngredients" placeholder="Search by Ingredients..." />
+        <select id="filterCuisine" required>
+          <option value="">Filter by Cuisine</option>
+          <option>Italian</option>
+          <option>Mexican</option>
+          <option>Indian</option>
+          <option>Chinese</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div id="recipeList"></div>
+    </div>
+  </div>
+
+<script src="./js/main.js">
+ 
+</script>
+</body>
+</html>
+
