@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-color: black;
+}
+
+.continer {
+    width: 1320px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -16px;
+    align-items: center;
+}
+
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+
+.w-100 {
+    width: 100%;
+}
+
+.color-w {
+    color: white;
+}
+
+li {
+    padding: 20px;
+    background-color: #232323;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    padding: 30px 0;
+}
+
+button,
+a[type="button"] {
+    border: 2px solid #e86962;
+    padding: 18px 45px;
+    display: inline-block;
+}
+
+.quotes-box {
+    box-shadow: 10px 10px 100px lightblue;
+    margin: 50px;
+    color: white;
+    padding: 35px;
+    border-radius: 10px;
+    background-color: #000000;
+}
+
+.j-evenly {
+    justify-content: space-evenly;
+}
+
+
+img {
+    width: 400px;
+    height: 200px;
+    object-fit: scale-down;
+}
