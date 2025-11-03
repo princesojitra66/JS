@@ -1,0 +1,18 @@
+  .card-img-top {
+    height: 180px;
+    object-fit: cover;
+  }
+
+  .btn-remove-item {
+    background-color: #dc3545;
+    color: white;
+  }
+
+  .product-description {
+    font-size: 0.9rem;
+    color: #555;
+  }
+
+  .category-badge {
+    font-size: 0.8rem;
+  }
