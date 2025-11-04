@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         main{
+            margin: 100px;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+        img{
+            width: 200px;
+            height: 200px;
+        }
+        .list{
+            transform-style: preserve-3d;
+            transform: perspective(1000px);
+        }
+        .list .item{
+            transition: .5s;
+            filter: brightness(0);
+        }
+        .list .item:hover{
+            filter: brightness(1);
+            transform: translateZ(200px);
+        }
+        .list .item:hover + * {
+            filter: brightness(0.6);
+            transform: translateZ(150px) rotateY(40deg);
+        }
+        .list .item:hover + * + * {
+            filter: brightness(0.4);
+            transform: translateZ(70px) rotateY(20deg);
+        }
+        .list .item:hover + * + * + * {
+            filter: brightness(0.2);
+            transform: translateZ(30px) rotateY(10deg);
+        }
+        .list .item:has(+ *:hover){
+            filter: brightness(0.6);
+            transform: translateZ(150px) rotateY(-40deg);
+        }
+        .list .item:has(+ * + *:hover){
+            filter: brightness(0.4);
+            transform: translateZ(70px) rotateY(-20deg);
+        }
+        .list .item:has(+ * + * + *:hover){
+            filter: brightness(0.2);
+            transform: translateZ(30px) rotateY(-10deg);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="list">
+            <div class="item"><img src="https://www.uphe.com/sites/default/files/styles/scale__344w_/public/2023/07/FastX_Poster%20ARt.jpg?itok=rlQoYVBu" alt=""></div>
+            <div class="item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqZ9J6SvQR8lAP6ozd0_rdHMY6XAJaGa5wVw&s" alt=""></div>
+            <div class="item"><img src="https://cdn.moviefone.com/admin-uploads/posters/insideout2-movie-poster_1709834077.jpg?d=360x540&q=80" alt=""></div>
+            <div class="item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkhKukzG-kE_tBMzSfGtXUMbYMHLNE2c1WJg&s" alt=""></div>
+            <div class="item"><img src="https://qqcdnpictest.mxplay.com/pic/484f535d77542bca63e21efb896f4cd6/en/2x3/312x468/test_pic1638541013780.webp" alt=""></div>
+            <div class="item"><img src="https://resizing.flixster.com/-vFHnG7tlMnZpRLW6PrQbh1AYrY=/206x305/v2/https://resizing.flixster.com/Z3G4m4KiDyyaaj8oHbfKcAxBYKw=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzg3N2E1NzE4LWY1OTAtNDI0MS05NGQyLTQxOWE2MjllMDE3YS5qcGc=" alt=""></div>
+        </div>
+    </main>
+</body>
+</html>

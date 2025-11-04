@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>photos</title>
+    <style>      
+        main{
+            margin: 500px;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }        
+        img{
+            width: 175px;
+            height: 175px;
+        }
+        .list{
+            transform-style: preserve-3d;
+            transform: perspective(1000px);
+            display: flex;
+        }
+        .list .item{
+            transition: .5s;
+            filter: brightness(0);
+        }
+        .list .item:hover{
+            filter: brightness(1);
+            transform: translateZ(200px);
+        }
+        .list .item:hover + * {
+            filter: brightness(0.6);
+            transform: translateZ(150px) rotateY(40deg);
+        }
+        .list .item:hover + * + * {
+            filter: brightness(0.4);
+            transform: translateZ(70px) rotateY(20deg);
+        }
+        .list .item:hover + * + * + * {
+            filter: brightness(0.2);
+            transform: translateZ(30px) rotateY(10deg);
+        }
+        .list .item:has(+ *:hover){
+            filter: brightness(0.6);
+            transform: translateZ(150px) rotateY(-40deg);
+        }
+        .list .item:has(+ * + *:hover){
+            filter: brightness(0.4);
+            transform: translateZ(70px) rotateY(-20deg);
+        }
+        .list .item:has(+ * + * + *:hover){
+            filter: brightness(0.2);
+            transform: translateZ(30px) rotateY(-10deg);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="list">
+            <div class="item" ><img src="https://imageio.forbes.com/specials-images/imageserve/5d35eacaf1176b0008974b54/2020-Chevrolet-Corvette-Stingray/0x0.jpg?format=jpg&crop=4560,2565,x790,y784,safe&width=960" alt=""></div>
+            <div class="item" ><img src="https://cdn.motor1.com/images/mgl/MkO9NN/s1/future-supercars.webp" alt=""></div>
+            <div class="item" ><img src="https://media.architecturaldigest.com/photos/63079fc7b4858efb76814bd2/16:9/w_4000,h_2250,c_limit/9.%20DeLorean-Alpha-5%20%5BDeLorean%5D.jpg" alt=""></div>
+            <div class="item" ><img src="https://etimg.etb2bimg.com/thumb/msid-84443929,width-1200,resizemode-4/.jpg" alt=""></div>
+            <div class="item" ><img src="https://www.autocar.co.uk/sites/autocar.co.uk/files/styles/gallery_slide/public/images/car-reviews/first-drives/legacy/rolls_royce_phantom_top_10.jpg?itok=XjL9f1tx" alt=""></div>
+            <div class="item" ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/McLaren_P1.jpg/338px-McLaren_P1.jpg" alt=""></div>
+            <div class="item" ><img src="https://robbreport.com/wp-content/uploads/2022/11/11-w-Utopia_1.jpg?w=681&h=383&crop=1" alt=""></div>
+            <div class="item" ><img src="https://blog.sothebysrealty.ae/hubfs/Imported_Blog_Media/919806de-5da5-4e6f-bdb0-208ace24f423-3.jpg" alt=""></div>
+            <div class="item" ><img src="https://cdn.motor1.com/images/mgl/NGGZon/s3/koenigsegg-gemera.jpg" alt=""></div>
+            <div class="item" ><img src="https://assets.architecturaldigest.in/photos/60004a09d68a278e29c86a11/16:9/w_2560%2Cc_limit/feature6-1366x768.jpg" alt=""></div>
+        </div>
+    </main>
+</body>
+</html>
